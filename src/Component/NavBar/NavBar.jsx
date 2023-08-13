@@ -33,7 +33,7 @@ const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box w="170px"><img src="../../../Public/logoTotoPedia.png" alt="" /></Box>
+            <Box w="170px"><img src="../../../public/logoTotoPedia.png" alt="" /></Box>
             <HStack
               as={"nav"}
               spacing={4}
