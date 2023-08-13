@@ -11,7 +11,7 @@ const Videos = () => {
 
   const getVideoDetail = async () => {
     const response = await fetch(
-      `https://midtermikhroma.ceiera.repl.co/videos/${video_Id}`
+      `${import.meta.env.VITE_BACKEND_SHOOT}/videos/${video_Id}`
     );
     const data = await response.json();
     setVideo(data.data);
@@ -19,7 +19,7 @@ const Videos = () => {
 
   const getComment = async () => {
     const response = await fetch(
-      `https://midtermikhroma.ceiera.repl.co/comments?videoId=${video_Id}`
+      `${import.meta.env.VITE_BACKEND_SHOOT}/comments?videoId=${video_Id}`
     );
     const data = await response.json();
     setComment(data.data);
@@ -27,7 +27,7 @@ const Videos = () => {
 
   const getProduct = async () => {
     const response = await fetch(
-      `https://midtermikhroma.ceiera.repl.co/products?videoId=${video_Id}`
+      `${import.meta.env.VITE_BACKEND_SHOOT}/products?videoId=${video_Id}`
     );
     const data = await response.json();
     setProduct(data.data);

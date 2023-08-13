@@ -12,7 +12,7 @@ const ListVideos = () => {
   const [ListVideoss, setListVideoss] = useState([""]);
   const getVideos = async (page = 1) => {
     const response = await fetch(
-      "https://midtermikhroma.ceiera.repl.co/videos"
+      `${import.meta.env.VITE_BACKEND_SHOOT}/videos`
     );
     const data = await response.json().then(data => {
         setListVideoss(data.data);
